@@ -1,0 +1,74 @@
+	LINK DEL DATA SET Y TODA LA INFORMACION NECESARIA
+	
+	
+	
+###### Se comprimio el data set por cuestiones de peso ya que se encuentra directamente en el repositorio de git hub #####
+
+
+
+link de descarga del data set:
+https://archive.ics.uci.edu/dataset/464/superconductivty+data
+
+Fuente: http://supercon.nims.go.jp/index_en.html (Base de Datos Nacional de Materiales — Japón)
+
+Objetivo: Predecir la temperatura crítica (critical_temp) de superconductores en función de características físico-químicas extraídas de su composición atómica.
+
+¿Qué es un superconductor?
+
+Un superconductor es un material que, al enfriarse por debajo de su temperatura crítica, pierde toda resistencia eléctrica. Predecir esta temperatura es clave en investigación de materiales.
+
+Estructura del Dataset
+tiene un total de:
+Filas 21.263 
+Columnas 82 
+
+Columnas del dataset
+
+Las 81 columnas de características describen propiedades estadísticas de los átomos que componen cada material. Para cada propiedad atómica existen variantes estadísticas:
+
+    mean_ → promedio
+    wtd_mean_ → promedio ponderado
+    gmean_ → media geométrica
+    wtd_gmean_ → media geométrica ponderada
+    entropy_ → entropía
+    range_ → rango (máx - mín)
+    std_ → desviación estándar
+
+Las propiedades atómicas sobre las que se calculan estas estadísticas son:
+
+    atomic_mass — Masa atómica
+    fie — Primera energía de ionización
+    atomic_radius — Radio atómico
+    Density — Densidad
+    ElectronAffinity — Afinidad electrónica
+    FusionHeat — Calor de fusión
+    ThermalConductivity — Conductividad térmica
+    Valence — Valencia
+
+También se incluye: number_of_elements — número de elementos distintos en el compuesto.
+
+Variable objetivo: critical_temp — Temperatura crítica en Kelvin (K)
+
+
+Selección de las 10 columnas para X y la variable Y
+¿Por qué estas 10 columnas?
+
+Se seleccionaron las 10 características con mayor correlación absoluta con critical_temp (excluyendo la propia variable objetivo).
+Esto garantiza que las variables elegidas tienen el mayor poder predictivo para el modelo de regresión lineal.
+# 	Característica 	Correlación 	¿Qué representa?
+1 	wtd_std_ThermalConductivity 	0.721 	Desv. estándar ponderada de la conductividad térmica
+2 	range_ThermalConductivity 	0.688 	Rango de conductividad térmica entre elementos
+3 	range_atomic_radius 	        0.654 	Rango del radio atómico entre elementos
+4 	std_ThermalConductivity 	0.654 	Desv. estándar de la conductividad térmica
+5 	wtd_mean_Valence 	        0.632 	Promedio ponderado de la valencia electrónica
+6 	wtd_entropy_atomic_mass 	0.627 	Entropía ponderada de la masa atómica
+7 	wtd_gmean_Valence 	        0.616 	Media geométrica ponderada de la valencia
+8 	wtd_entropy_atomic_radius 	0.603 	Entropía ponderada del radio atómico
+9 	number_of_elements 	        0.601 	Número de elementos distintos en el compuesto
+10 	range_fie 	                0.601 	Rango de la primera energía de ionización
+
+
+¿Por qué Y = critical_temp?
+
+Es la variable objetivo natural del dataset:
+el valor que los científicos buscan predecir para encontrar nuevos superconductores de alta temperatura.
