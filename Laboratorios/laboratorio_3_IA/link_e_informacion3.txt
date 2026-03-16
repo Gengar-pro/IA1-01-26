@@ -1,0 +1,78 @@
+	LINK DEL DATA SET Y TODA LA INFORMACION NECESARIA
+	
+	
+	
+###### Se comprimio el data set por cuestiones de peso ya que se encuentra directamente en el repositorio de git hub #####
+
+
+
+link de descarga del data set:
+https://www.kaggle.com/datasets/minhnhathuynh/seattle-flight-delay-and-weather-prediction-dataset?select=train.csv
+ 
+Fuente: Datos de vuelos comerciales de Estados Unidos combinados con registros meteorológicos por hora correspondientes al año 2024.
+
+Objetivo: Predecir si un vuelo tendrá un retraso en la salida mayor a 15 minutos (DEP_DEL15) en función de características del vuelo y condiciones meteorológicas registradas en el aeropuerto.
+
+¿Qué es un retraso de vuelo?
+
+Un retraso de vuelo ocurre cuando una aeronave despega después del horario programado.
+En este dataset se considera retrasado un vuelo cuya salida ocurre 15 minutos o más tarde que la hora planificada.
+
+Predecir retrasos es importante para mejorar la planificación aeroportuaria, optimizar la logística de aerolíneas y reducir costos operativos.
+
+Estructura del Dataset
+tiene un total de:
+Filas 321.307
+Columnas 43
+
+Columnas del dataset
+
+Las columnas describen información relacionada con el horario del vuelo, características operativas del viaje y condiciones meteorológicas registradas en el aeropuerto.
+¿Por qué estas 37 columnas?
+Se seleccionaron las 37 características con mayor correlación absoluta con DEP_DEL15 (excluyendo la propia variable objetivo).
+Esto garantiza que las variables elegidas tienen mayor capacidad predictiva para el modelo de regresión logística binaria.
+
+Característica ¿Qué representa?
+
+1 CRS_DEP_TIME Hora programada de salida
+2 HOUR Hora del día
+3 CRS_ARR_TIME Hora programada de llegada
+4 HourlyRelativeHumidity Humedad relativa del aire
+5 DISTANCE Distancia del vuelo
+6 HourlyDryBulbTemperature Temperatura ambiente
+7 BKN Nubes parciales
+8 ORIGIN_enc Frecuencia del aeropuerto origen
+9 DEST_enc Frecuencia del aeropuerto destino
+10 MONTH Mes del año
+11 Layer1 Height Altura de la capa de nubes 1
+12 OVC Cielo cubierto
+13 HourlyWindSpeed Velocidad del viento
+14 OP_CARRIER_enc Frecuencia de la aerolínea
+15 TS Tormenta
+16 Layer3 Height Altura de la capa de nubes 3
+17 IS_HOLIDAY Indica si el día es festivo
+18 HourlyWindDirection Dirección del viento
+19 Layer2 Height Altura de la capa de nubes 2
+20 FG Niebla
+21 FU Humo
+22 HZ Neblina
+23 HourlyDewPointTemperature Temperatura del punto de rocío
+24 FZ Helada
+25 FZRA Lluvia helada
+26 SCT Nubes dispersas
+27 DZ Llovizna
+28 SN Nieve
+29 HourlyPrecipitation Precipitación
+30 HourlyStationPressure Presión atmosférica
+31 HourlyWindGustSpeed Ráfagas de viento
+32 DAY_OF_MONTH Día del mes
+33 HourlyVisibility Visibilidad
+34 FEW Pocas nubes
+35 TAIL_NUM_enc Frecuencia del avión
+36 BR Bruma
+37 RA Lluvia
+
+¿Por qué Y = DEP_DEL15?
+Es la variable objetivo natural del dataset:
+el valor que se busca predecir para determinar si un vuelo tendrá retraso significativo en la salida.
+Este tipo de problema se modela mediante regresión logística binaria, ya que la variable objetivo solo puede tomar dos valores: vuelo puntual o vuelo retrasado.
