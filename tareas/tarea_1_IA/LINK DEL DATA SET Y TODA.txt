@@ -1,0 +1,47 @@
+	LINK DEL DATA SET Y TODA LA INFORMACION NECESARIA
+	
+
+Link del dataset:https://archive.ics.uci.edu/dataset/186/wine+quality
+
+
+Objetivo: Clasificar la calidad del vino (quality) en función de pruebas fisicoquímicas como la acidez, el azúcar y el nivel de alcohol.
+¿Qué es la Calidad del Vino en este dataset?
+
+La calidad es una puntuación numérica basada en pruebas sensoriales realizadas por expertos. Para este modelo de regresión lineal binaria, los datos se dividen para predecir si un vino es de "Alta Calidad" (1) o "Baja Calidad" (0).
+Estructura del Dataset
+
+El dataset cuenta con un total de:
+
+    Filas: 1,599 (Vino Tinto)
+
+    Columnas: 12
+
+Columnas del dataset
+
+Las 11 columnas de características (X) describen las propiedades químicas del vino:
+
+    fixed acidity — Acidez fija: ácidos no volátiles.
+    volatile acidity — Acidez volátil: cantidad de ácido acético (en exceso da sabor a vinagre).
+    citric acid — Ácido cítrico: añade frescura y sabor.
+    residual sugar — Azúcar residual: azúcar que queda tras la fermentación.
+    chlorides — Cloruros: cantidad de sal en el vino.
+    free sulfur dioxide — Dióxido de azufre libre: previene el crecimiento microbiano.
+    total sulfur dioxide — Dióxido de azufre total: suma del SO2 libre y el ligado.
+    density — Densidad: depende del contenido de alcohol y azúcar.
+    pH — pH: describe qué tan ácido o básico es el vino (escala de 0 a 14).
+    sulphates — Sulfatos: aditivo que actúa como antimicrobiano.
+    alcohol — Alcohol: el porcentaje de volumen de alcohol en el vino.
+
+Variable objetivo (Y): quality — Puntuación entre 0 y 10 (convertida a binaria para este estudio).
+Selección de las 5 columnas para X y la variable Y
+
+Nota: Se seleccionan las características con mayor relevancia para la clasificación de calidad.
+	Característica	¿Qué representa?
+1	alcohol	Es el factor con mayor impacto positivo en la calidad.
+2	volatile acidity	Un nivel alto indica deterioro y baja la calidad.
+3	sulphates	Ayudan a la conservación y mejoran la puntuación.
+4	citric acid	Aporta frescura, correlacionado positivamente con la calidad.
+5	total sulfur dioxide	Indica la estabilidad y frescura del vino.
+¿Por qué Y = quality?
+
+Es la variable de salida que permite determinar el éxito de un vino en el mercado. Al usar una regresión binaria, buscamos identificar qué factores químicos definen automáticamente si un vino será calificado como excelente por los expertos.
