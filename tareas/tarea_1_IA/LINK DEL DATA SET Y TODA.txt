@@ -1,5 +1,7 @@
 	LINK DEL DATA SET Y TODA LA INFORMACION NECESARIA
 	
+Link de Git Hub :https://github.com/Gengar-pro/IA1-01-26/tree/main/tareas/tarea_1_IA
+"todo el contenido del ZIP tambien se encuentra disponible en git hub"
 
 Link del dataset:https://archive.ics.uci.edu/dataset/186/wine+quality
 
