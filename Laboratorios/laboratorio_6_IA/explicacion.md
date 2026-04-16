@@ -1,6 +1,10 @@
 # 🧠 Red Neuronal para Clasificación Multiclase de Meningitis
 ### Laboratorio 6 — SIS420: Inteligencia Artificial
 
+
+## 👥 Autores
+NOMBRE: Luis Fernando Quispe Sullca 
+Carrera: Ing en Cico 
 ---
 
 ## 📋 Descripción General
